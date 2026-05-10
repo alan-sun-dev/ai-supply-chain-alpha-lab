@@ -1,0 +1,176 @@
+# Data source registry.
+#
+# `status` values:
+#   production    — wired and in use by the pipeline
+#   ready         — schema verified; awaiting a fetch script
+#   experimental  — promising but rate-limited, paywalled, or unstable
+#   manual        — fallback; user maintains a CSV
+#
+# Use `python scripts/fetch_<source>.py` to refresh, or check
+# README §15 (automation roadmap) for the recommended stack.
+
+sources:
+
+  # =========================================================================
+  # PRICES (OHLCV) — already wired
+  # =========================================================================
+  yfinance:
+    status: production
+    enabled: true
+    history_start: "2018-01-01"
+    history_end: null
+    cache_dir: "data/raw/yfinance"
+    auto_adjust: true
+    retries: 2
+    benchmark_primary: "0050.TW"
+    benchmark_secondary: "^TWII"
+    note: |
+      Free, no auth. Occasionally drops a Taiwan trading day; cross-check with
+      twstock or FinMind for completeness if it matters.
+
+  # =========================================================================
+  # MONTHLY REVENUE (MOPS) — primary: FinMind; fallback: TWSE OpenAPI
+  # =========================================================================
+  finmind:
+    status: production
+    enabled: true
+    base_url: "https://api.finmindtrade.com/api/v4/data"
+    datasets:
+      monthly_revenue:        "TaiwanStockMonthRevenue"
+      institutional_flow:     "TaiwanStockInstitutionalInvestorsBuySell"
+      shareholding:           "TaiwanStockShareholding"
+      financial_statements:   "TaiwanStockFinancialStatements"
+      balance_sheet:          "TaiwanStockBalanceSheet"
+      cash_flow:              "TaiwanStockCashFlowsStatement"
+      news:                   "TaiwanStockNews"
+    rate_limit_per_hour: 300            # 600 with free token
+    token: null                          # add your finmindtrade.com token here
+    note: |
+      Open-source (https://github.com/FinMind/FinMind). Best single-source for
+      Taiwan fundamentals + chip-level data. Used by scripts/fetch_monthly_revenue.py.
+      Get a free token at finmindtrade.com to double the rate limit.
+
+  twse_openapi:
+    status: ready
+    enabled: false
+    base_url: "https://openapi.twse.com.tw/v1"
+    endpoints:
+      monthly_revenue_listed: "/opendata/t187ap05_L"   # 上市，最新月份
+      monthly_revenue_otc:    "/opendata/t187ap05_O"   # 上櫃
+      institutional_listed:   "/exchangeReport/MI_INDEX"
+    note: |
+      Official, no auth, free; **only the LATEST month**, not historical.
+      Use for last-mile patches if FinMind lags. Pair with TPEx OpenAPI
+      (https://www.tpex.org.tw/openapi/) for OTC names.
+
+  finlab:
+    status: experimental
+    enabled: false
+    note: |
+      finlab.tw / finlab-python provides a Taiwan quant SDK with MOPS scrapers.
+      Free tier exists but tied to account; check https://github.com/finlab-python.
+
+  # =========================================================================
+  # TSMC CAPEX EVENTS — SEC EDGAR primary; IR PDF backup; transcripts via Finnhub
+  # =========================================================================
+  sec_edgar:
+    status: production
+    enabled: true
+    issuer: "TSM"
+    cik: "0001046179"
+    forms: ["6-K", "20-F"]
+    note: |
+      TSMC files 6-K (foreign issuer equivalent of 8-K) for earnings.
+      Use `sec-edgar-downloader` (https://pypi.org/project/sec-edgar-downloader/)
+      or hit https://data.sec.gov/submissions/CIK0001046179.json directly.
+      MUST set User-Agent per SEC fair-access policy.
+
+  tsmc_ir:
+    status: manual
+    enabled: false
+    base_url: "https://investor.tsmc.com/english/quarterly-results"
+    note: |
+      Source-of-truth for capex guidance numbers. Quarterly transcript PDFs
+      under /YYYY/qN/. Worth scraping to verify SEC filings or fill gaps.
+
+  finnhub_transcripts:
+    status: experimental
+    enabled: false
+    base_url: "https://finnhub.io/api/v1/stock/transcripts"
+    note: |
+      Free tier covers ~5 years of earnings call transcripts for TSM.
+      Requires API key. Useful for auto-tagging capex_signal from text.
+
+  # =========================================================================
+  # NEWS / EVENTS — GDELT primary; NewsAPI as low-latency complement
+  # =========================================================================
+  gdelt:
+    status: production
+    enabled: true
+    api: "doc-2.0"
+    base_url: "https://api.gdeltproject.org/api/v2/doc/doc"
+    python_client: "gdelt-doc-api"
+    note: |
+      Free, no auth, no rate limit (within reason). Indexes news in 100+
+      languages, updated every 15 min. Filter by `taiwan semiconductor capex`
+      / `cowos` / `arizona fab` / `2nm` keywords. Good for fab announcements
+      between earnings calls.
+
+  newsapi:
+    status: experimental
+    enabled: false
+    note: |
+      newsapi.org free tier: 100 req/day, 24h delay. Good for development;
+      paid tier needed for production.
+
+  # =========================================================================
+  # INSTITUTIONAL FLOW (三大法人) — FinMind covers this
+  # =========================================================================
+  institutional_flow:
+    status: production
+    enabled: true
+    note: |
+      Pulled via FinMind dataset `TaiwanStockInstitutionalInvestorsBuySell`
+      by `scripts/fetch_institutional_flow.py`. Wired into scoring_model
+      as `foreign_net_30d_positive` / `foreign_net_30d_negative` rules.
+
+  # =========================================================================
+  # ALTERNATIVE PRICE / EQUITY DATA — paid or partial coverage
+  # =========================================================================
+  fugle_marketdata:
+    status: experimental
+    enabled: false
+    note: |
+      Fugle (https://developer.fugle.tw) offers a Python SDK for tick / candle
+      data. Requires API key; free tier covers basic historical candles.
+
+  shioaji:
+    status: experimental
+    enabled: false
+    note: |
+      Sinotrade Shioaji broker API. Stable, but requires SinoPac brokerage
+      account and signed e-trading agreement. Not suitable for research-only.
+
+  twstock:
+    status: experimental
+    enabled: false
+    note: |
+      Old but maintained Python lib (mlouielu/twstock). Use as yfinance
+      fallback when Yahoo drops Taiwan rows.
+
+  # =========================================================================
+  # MANUAL FALLBACK
+  # =========================================================================
+  manual_csv:
+    status: production
+    enabled: true
+    base_path: "data/manual"
+    files:
+      capex_events:        "tsmc_capex_events.csv"
+      beneficiary_universe: "beneficiary_universe.csv"
+      monthly_revenue:     "monthly_revenue.csv"
+
+settings:
+  trading_calendar: "TW"
+  timezone: "Asia/Taipei"
+  sec_user_agent: "tsmc-capex-alpha-lab/0.1 shou.shih@gmail.com"

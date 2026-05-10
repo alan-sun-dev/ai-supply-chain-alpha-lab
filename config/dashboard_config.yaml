@@ -1,0 +1,24 @@
+# Dashboard payload configuration.
+
+output:
+  json_path: "data/output/dashboard_data.json"
+  report_path: "reports/daily_alpha_report.md"
+
+display:
+  top_alpha_n:        10
+  watchlist_n:        15
+  narrative_watch_n:  10
+  risk_warning_n:     10
+  theme_heatmap_themes:
+    - facility_cleanroom
+    - semi_equipment
+    - advanced_packaging
+    - inspection
+    - gases_chemicals
+    - indirect
+
+report:
+  title: "AI Supply Chain Alpha Daily Report"
+  show_factor_health: true
+  show_what_changed: true
+  language: "zh-Hant"

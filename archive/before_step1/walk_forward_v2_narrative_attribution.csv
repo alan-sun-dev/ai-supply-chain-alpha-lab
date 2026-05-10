@@ -1,0 +1,4 @@
+variant,mean_monthly,sharpe_ann,max_dd,total_return,__note
+with_narrative,0.053298684074403545,1.681170333314213,-0.3139803746590336,25.26454248702169,
+without_narrative,0.053298684074403545,1.681170333314213,-0.3139803746590336,25.26454248702169,
+narrative_score_alone_spearman,,,,,"rho=nan, p=nan"

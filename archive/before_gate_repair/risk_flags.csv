@@ -1,0 +1,98 @@
+ticker,company_name,theme,risk_flag,severity,description
+2408.TW,南亞科 Nanya Tech,memory_hbm,excessive_drawdown,high,120d drawdown -34.0%
+2408.TW,南亞科 Nanya Tech,memory_hbm,valuation_extreme,high,PER=101.2
+2313.TW,華通 Compeq Manufacturing,pcb_substrate,overbought,high,3m return 43.0%
+2313.TW,華通 Compeq Manufacturing,pcb_substrate,valuation_extreme,medium,PER=44.4
+2344.TW,華邦電 Winbond,memory_hbm,excessive_drawdown,high,120d drawdown -30.6%
+2344.TW,華邦電 Winbond,memory_hbm,valuation_extreme,high,PER=102.0
+2308.TW,台達電 Delta Electronics,power_grid_energy,overbought,high,3m return 71.8%
+2308.TW,台達電 Delta Electronics,power_grid_energy,valuation_extreme,high,PER=79.8
+2308.TW,台達電 Delta Electronics,power_grid_energy,valuation_extreme,medium,PBR=18.77
+3037.TW,欣興 Unimicron,pcb_substrate,overbought,high,3m return 160.5%
+3037.TW,欣興 Unimicron,pcb_substrate,valuation_extreme,high,PER=129.8
+3037.TW,欣興 Unimicron,pcb_substrate,valuation_extreme,medium,PBR=12.37
+8299.TWO,群聯 Phison,memory_hbm,valuation_extreme,medium,PER=45.3
+3189.TW,景碩 Kinsus,pcb_substrate,overbought,high,3m return 155.2%
+3189.TW,景碩 Kinsus,pcb_substrate,valuation_extreme,high,PER=151.3
+3189.TW,景碩 Kinsus,pcb_substrate,valuation_extreme,medium,PBR=7.37
+3105.TWO,穩懋 WIN Semi,semi_equipment,overbought,high,3m return 132.5%
+3105.TWO,穩懋 WIN Semi,semi_equipment,valuation_extreme,high,PER=134.0
+3017.TW,奇鋐 Auras Technology,thermal,overbought,high,3m return 106.2%
+3017.TW,奇鋐 Auras Technology,thermal,valuation_extreme,medium,PER=58.0
+3017.TW,奇鋐 Auras Technology,thermal,valuation_extreme,medium,PBR=24.93
+2383.TW,台光電 Elite Material,pcb_substrate,overbought,high,3m return 152.5%
+2383.TW,台光電 Elite Material,pcb_substrate,valuation_extreme,high,PER=98.6
+2383.TW,台光電 Elite Material,pcb_substrate,valuation_extreme,medium,PBR=33.97
+8046.TW,南電 Nan Ya PCB,pcb_substrate,overbought,high,3m return 163.1%
+8046.TW,南電 Nan Ya PCB,pcb_substrate,valuation_extreme,high,PER=333.9
+8046.TW,南電 Nan Ya PCB,pcb_substrate,valuation_extreme,medium,PBR=14.08
+3260.TWO,威剛 ADATA,memory_hbm,overbought,high,3m return 43.3%
+2368.TW,金像電 Gold Circuit Electronics,pcb_substrate,overbought,high,3m return 115.2%
+2368.TW,金像電 Gold Circuit Electronics,pcb_substrate,valuation_extreme,high,PER=73.1
+2368.TW,金像電 Gold Circuit Electronics,pcb_substrate,valuation_extreme,medium,PBR=20.98
+6274.TWO,台燿 Taiwan Union Tech,pcb_substrate,overbought,high,3m return 102.0%
+6274.TWO,台燿 Taiwan Union Tech,pcb_substrate,valuation_extreme,high,PER=83.3
+6274.TWO,台燿 Taiwan Union Tech,pcb_substrate,valuation_extreme,medium,PBR=15.67
+4979.TWO,華星光通 PCL Tech,optical_communication,overbought,high,3m return 108.9%
+4979.TWO,華星光通 PCL Tech,optical_communication,valuation_extreme,high,PER=112.2
+4979.TWO,華星光通 PCL Tech,optical_communication,valuation_extreme,medium,PBR=21.59
+3653.TW,健策 KEDGE,thermal,overbought,high,3m return 92.5%
+3653.TW,健策 KEDGE,thermal,valuation_extreme,high,PER=149.6
+3653.TW,健策 KEDGE,thermal,valuation_extreme,medium,PBR=34.57
+8358.TW,金居 Co-Tech Development,pcb_substrate,overbought,high,3m return 41.5%
+8358.TW,金居 Co-Tech Development,pcb_substrate,valuation_extreme,high,PER=92.3
+8358.TW,金居 Co-Tech Development,pcb_substrate,valuation_extreme,medium,PBR=13.06
+3450.TWO,聯鈞 Browave,optical_communication,revenue_not_confirmed,high,latest yoy=-25.6%
+3450.TWO,聯鈞 Browave,optical_communication,valuation_extreme,high,PER=60.3
+3450.TWO,聯鈞 Browave,optical_communication,valuation_extreme,medium,PBR=8.69
+3324.TWO,雙鴻 Asia Vital Components,thermal,valuation_extreme,medium,PER=40.3
+3324.TWO,雙鴻 Asia Vital Components,thermal,valuation_extreme,medium,PBR=9.50
+3081.TWO,聯亞 LandMark Optoelectronics,optical_communication,overbought,high,3m return 237.6%
+3081.TWO,聯亞 LandMark Optoelectronics,optical_communication,valuation_extreme,high,PER=346.9
+3081.TWO,聯亞 LandMark Optoelectronics,optical_communication,valuation_extreme,medium,PBR=57.62
+6442.TW,光聖 Luxnet Corp,optical_communication,overbought,high,3m return 55.7%
+6442.TW,光聖 Luxnet Corp,optical_communication,valuation_extreme,high,PER=92.3
+6442.TW,光聖 Luxnet Corp,optical_communication,valuation_extreme,medium,PBR=24.00
+6213.TW,聯茂 ITEQ,pcb_substrate,overbought,high,3m return 125.9%
+6213.TW,聯茂 ITEQ,pcb_substrate,valuation_extreme,high,PER=64.9
+2404.TW,漢唐 United Integrated Services,facility_cleanroom,valuation_extreme,medium,PBR=9.62
+1519.TW,華城 Hua Eng Wire,power_grid_energy,valuation_extreme,high,PER=63.5
+1519.TW,華城 Hua Eng Wire,power_grid_energy,valuation_extreme,medium,PBR=26.51
+6187.TWO,萬潤 Wan Run,semi_equipment,overbought,high,3m return 211.1%
+6187.TWO,萬潤 Wan Run,semi_equipment,valuation_extreme,high,PER=78.3
+6187.TWO,萬潤 Wan Run,semi_equipment,valuation_extreme,medium,PBR=15.95
+8996.TW,高力 KAORI,thermal,overbought,high,3m return 75.0%
+8996.TW,高力 KAORI,thermal,valuation_extreme,high,PER=138.6
+8996.TW,高力 KAORI,thermal,valuation_extreme,medium,PBR=27.55
+6139.TW,亞翔工程 Acter,facility_cleanroom,valuation_extreme,medium,PBR=8.10
+3363.TWO,上詮 LuxNet,optical_communication,overbought,high,3m return 86.4%
+3363.TWO,上詮 LuxNet,optical_communication,price_up_revenue_down,high,"price 3m=86.4%, latest yoy=-25.7%"
+3363.TWO,上詮 LuxNet,optical_communication,revenue_not_confirmed,high,latest yoy=-25.7%
+3363.TWO,上詮 LuxNet,optical_communication,valuation_extreme,high,PER=4806.2
+3363.TWO,上詮 LuxNet,optical_communication,valuation_extreme,medium,PBR=31.26
+4977.TW,眾達-KY Applied Optoelectronics,optical_communication,overbought,high,3m return 76.8%
+4977.TW,眾達-KY Applied Optoelectronics,optical_communication,price_up_revenue_down,high,"price 3m=76.8%, latest yoy=-19.4%"
+4977.TW,眾達-KY Applied Optoelectronics,optical_communication,revenue_not_confirmed,high,latest yoy=-19.4%
+4977.TW,眾達-KY Applied Optoelectronics,optical_communication,valuation_extreme,medium,PER=49.2
+3131.TWO,弘塑 Grand Process Technology,semi_equipment,overbought,high,3m return 68.1%
+3131.TWO,弘塑 Grand Process Technology,semi_equipment,valuation_extreme,high,PER=64.9
+3131.TWO,弘塑 Grand Process Technology,semi_equipment,valuation_extreme,medium,PBR=17.88
+3491.TWO,昇達科 Microelectronics Technology,leo_satellite,overbought,high,3m return 43.5%
+3491.TWO,昇達科 Microelectronics Technology,leo_satellite,valuation_extreme,high,PER=198.0
+3491.TWO,昇達科 Microelectronics Technology,leo_satellite,valuation_extreme,medium,PBR=29.48
+5536.TW,聖暉 Acter Group,facility_cleanroom,valuation_extreme,medium,PBR=7.80
+6282.TW,康舒 ACBEL Polytech,power_grid_energy,excessive_drawdown,high,120d drawdown -25.8%
+6282.TW,康舒 ACBEL Polytech,power_grid_energy,valuation_extreme,high,PER=263.1
+3583.TW,辛耘 Sun Tech,semi_equipment,overbought,high,3m return 138.9%
+3583.TW,辛耘 Sun Tech,semi_equipment,valuation_extreme,medium,PER=57.3
+3583.TW,辛耘 Sun Tech,semi_equipment,valuation_extreme,medium,PBR=10.50
+1504.TW,東元 TECO,power_grid_energy,excessive_drawdown,high,120d drawdown -46.4%
+3680.TW,家登 Gudeng Precision,semi_equipment,price_up_revenue_down,high,"price 3m=21.9%, latest yoy=-23.4%"
+3680.TW,家登 Gudeng Precision,semi_equipment,revenue_not_confirmed,high,latest yoy=-23.4%
+3680.TW,家登 Gudeng Precision,semi_equipment,valuation_extreme,medium,PER=57.0
+2377.TW,微星 MSI,ai_server_assembly,revenue_not_confirmed,high,latest yoy=-11.9%
+3587.TW,閎康 Materials Analysis Technology,inspection,overbought,high,3m return 72.2%
+3587.TW,閎康 Materials Analysis Technology,inspection,valuation_extreme,medium,PER=54.3
+2351.TW,順德 SDI,gases_chemicals,overbought,high,3m return 82.0%
+2351.TW,順德 SDI,gases_chemicals,valuation_extreme,high,PER=92.8
+2436.TW,偉詮電 Weltrend,semi_equipment,overbought,high,3m return 42.3%

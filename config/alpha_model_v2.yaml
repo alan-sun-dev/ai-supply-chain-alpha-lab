@@ -1,0 +1,139 @@
+# Alpha Model V2 — Residual Alpha + Theme + Confirmation
+# All weights subject to walk-forward validation.
+
+ai_factor_index:
+  benchmark_primary:   "0050.TW"
+  benchmark_secondary: "^TWII"
+  benchmark_global:    "^SOX"            # graceful fallback if missing
+  theme_weights:
+    facility_cleanroom: 0.25
+    semi_equipment:     0.25
+    advanced_packaging: 0.20
+    inspection:         0.10
+    gases_chemicals:    0.10
+    indirect:           0.10
+  history_start: "2018-01-01"
+
+residual_alpha:
+  rolling_window_days: 120
+  min_obs:             60          # below this → leave betas NaN, do not trade
+  benchmark:           "0050.TW"
+  ai_index_source:     "aggregate"
+  momentum_windows:    [20, 60]
+  vol_window:          60
+  drawdown_window:     60
+
+scoring_v2:
+  # Final alpha_score is a weighted sum of normalized sub-scores.
+  # Phase A1 (2026-05-03): sector_relative_strength + narrative zeroed after
+  # walk-forward ablation showed they hurt or added no value. residual alpha
+  # remains Tier 1 core; risk_penalty + decision-zone hierarchy unchanged.
+  factor_weights:
+    residual_momentum_60d:        0.25
+    residual_momentum_20d:        0.10
+    revenue_acceleration:         0.15
+    sector_relative_strength:     0.00   # A1: removed — ablation showed it hurts (+650 pts when off)
+    institutional_flow_score:     0.10
+    valuation_risk_score:        -0.10   # penalty
+    volatility_contraction:       0.10
+    drawdown_recovery:            0.10
+    theme_strength:               0.10
+    capex_context_score:          0.00   # context only — never a trigger
+
+  # Tier weights blend into final alpha_score.
+  # A2-adopt (2026-05-03 post-B3): "simplest robust" weights from A2-rerun
+  # weight grid on full FinMind coverage. Findings:
+  #   - rev_w sensitivity is monotonic — every increment hurts; optimum = 0
+  #   - flw_w sensitivity is flat 0-0.20 → 0 chosen for simplicity
+  #   - ra_w optimum is 0.50 (was 0.35 under pre-B3 partial coverage)
+  #   - risk_mult optimum is 0.5-0.75; 0.75 chosen as safer middle
+  # Engineering baseline — model is now `residual_alpha − 0.75 × risk_penalty`.
+  # See reports/phase_a2rerun_post_b3.md for full grid + sensitivity tables.
+  tier_weights:
+    residual_alpha_score:        0.50   # was 0.35 (A2-adopt)
+    revenue_confirmation_score:  0.00   # was 0.30 (dropped A2-adopt: noisy after B3)
+    sector_relative_score:       0.00   # A1: removed
+    institutional_flow_score:    0.00   # was 0.10 (dropped A2-adopt: flat sensitivity)
+    narrative_score:             0.00   # A1: removed
+    capex_context_score:         0.05   # context only
+
+  # Ceilings ensure narrative/CAPEX never dominate.
+  caps:
+    capex_context_score: 0.5     # max 0.5 raw points before tier weighting
+    narrative_score_share: 0.10  # narrative may not exceed 10% of total
+
+  # Risk-penalty calibration (A2-adopt 2026-05-03).
+  # `risk_penalty` was previously hardcoded with implicit multiplier = 1.0.
+  # A2-rerun grid showed 0.5–0.75 dominates 1.0+ across all robustness-passing
+  # cells; 0.75 chosen to keep risk discipline active while removing ~25% of
+  # the in-sample drag from valuation-extreme penalties on AI-mania names.
+  # Default 1.0 preserved when this field is absent (backwards compatible).
+  risk:
+    penalty_multiplier: 0.75
+
+  # Decision zones — gate-repair (2026-05-03 post-A2-adopt).
+  # ─────────────────────────────────────────────────────────────────────────
+  # Old gates relied on `tier2_positive` (rev > 0 OR flow > 0). Under the
+  # Simplest-Robust active baseline (rev_w = flw_w = 0) those tiers are
+  # always 0, which made:
+  #   - Strong Candidate structurally empty (always failed tier2_positive)
+  #   - Avoid Chasing inflate ~15× (always satisfied tier2_revenue<=0)
+  # New gates use *direct* signal indicators that don't depend on which tier
+  # weights are active:
+  #   - Strong: alpha + residual_alpha strength + risk_penalty cap
+  #   - Avoid Chasing: actual flag presence (overbought OR valuation_extreme)
+  #     + high risk severity
+  #   - Watchlist: positive alpha + positive residual + acceptable risk
+  # All thresholds are read by `_resolve_decision_zone` via `_zone_threshold`;
+  # missing fields fall back to safe defaults (see scoring_model_v2.py).
+  # `min_confidence` for Strong lowered 3.0 → 2.5 because under new weights
+  # confidence_score caps at ~2.5 (data_quality only; signal_agreement is
+  # always 0 when rev=flw=0). Old 3.0 was structurally unreachable.
+  decision_zones:
+    - { name: "Strong Candidate",
+        min_alpha:           2.5,
+        min_confidence:      2.5,    # was 3.0; lowered to match new conf distribution
+        min_residual_alpha:  1.5,    # NEW: tier1 contribution must be at least this
+        max_risk_penalty:    2.0 }   # NEW: alpha-units cap on risk_penalty
+    - { name: "Watchlist",
+        min_alpha:                  2.0,
+        min_confidence:             2.0,
+        max_risk_penalty:           4.0,    # NEW
+        require_residual_positive:  true }  # NEW: tier1 must be > 0
+    - { name: "Narrative Watch", min_alpha: 0.0, min_confidence: 0.0, narrative_only: true }
+    - { name: "Avoid Chasing",
+        require_overbought_or_valuation_extreme: true,   # NEW: gate on actual flags
+        min_risk_severity:                       6 }     # was 5; raised 2026-05-09 after gate-replay.
+                                                         # Reasons that hold up:
+                                                         #   - severity=5 cohort (n=14 reroutes) had
+                                                         #     +8.6% mean fwd-1m / 64% hit, indistinguishable
+                                                         #     from Strong (+9.7% / 63%) — not real chasers.
+                                                         #   - severity-6 matches tier4_blocking's threshold.
+                                                         #   - Strong-empty months 35 → 29 (49% → 41%).
+                                                         # Reason that did NOT hold up:
+                                                         #   - first-pass claim of Sharpe 1.86 → 2.04 came
+                                                         #     from a loose `head(5)` sim. Apples-to-apples
+                                                         #     (same-58-months) gate-filter Δ Sharpe is only
+                                                         #     +0.012; the rest is coverage drag from the
+                                                         #     <5-eligible-name skip rule. The change is a
+                                                         #     structural fix, not a portfolio-perf win.
+                                                         # See gate_attribution table in walk_forward_v2_summary.md §6.
+    - { name: "Neutral",          min_alpha: 0.0,    min_confidence: 0.0 }
+    - { name: "Avoid",            min_alpha: -999.0, min_confidence: -999.0 }
+
+  # Step-1 portfolio construction layer — applied AFTER decision_zone is set.
+  # The label says "research priority"; the cap controls actual sizing.
+  portfolio_construction:
+    top_n: 5
+    max_per_theme: 2          # at most 2 of the top-5 may share a theme
+    enable_theme_cap: true
+
+confidence:
+  data_quality_min_obs: 60
+  signal_agreement_bonus: 1.0
+  multi_source_news_bonus: 1.0
+  missing_data_penalty: 1.0
+  regime_penalty:
+    risk_off:           1.5
+    ai_bubble_warning:  1.0
+    drawdown_control:   2.0

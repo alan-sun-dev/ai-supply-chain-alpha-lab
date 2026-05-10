@@ -1,0 +1,101 @@
+# Keyword dictionary for narrative classification.
+
+themes:
+  cowos:
+    keywords:
+      - CoWoS
+      - advanced packaging
+      - AI packaging
+      - HBM integration
+      - 2.5D packaging
+      - chiplet
+  twonm:
+    keywords:
+      - 2nm
+      - N2
+      - nanosheet
+      - gate-all-around
+      - GAAFET
+  ai_server:
+    keywords:
+      - AI server
+      - GB200
+      - GB300
+      - B200
+      - B300
+      - rack scale
+      - liquid cooling
+      - NVL72
+  facility:
+    keywords:
+      - cleanroom
+      - fab construction
+      - facility engineering
+      - utility system
+      - gas system
+      - 漢唐
+      - 亞翔
+      - 聖暉
+      - 帆宣
+  optical:
+    keywords:
+      - silicon photonics
+      - optical interconnect
+      - CPO
+      - 800G
+      - 1.6T
+  memory:
+    keywords:
+      - HBM
+      - HBM3
+      - HBM4
+      - DDR5
+      - DRAM
+      - NAND
+      - memory shortage
+  passive_components:
+    keywords:
+      - MLCC
+      - tantalum capacitor
+      - inductor
+      - passive component
+      - price hike
+  power_grid:
+    keywords:
+      - power shortage
+      - data center power
+      - grid upgrade
+      - nuclear
+      - gas turbine
+
+signal_types:
+  positive:
+    - order win
+    - capacity expansion
+    - price hike
+    - shortage
+    - demand exceeds supply
+    - guidance raised
+    - 上修
+    - 拉貨
+    - 缺貨
+    - 漲價
+    - record high
+    - new high
+    - beats estimate
+    - exceeds expectations
+  negative:
+    - order cut
+    - delay
+    - inventory correction
+    - price decline
+    - utilization drop
+    - guidance lowered
+    - 下修
+    - 砍單
+    - 庫存調整
+    - 跌價
+    - misses estimate
+    - below expectations
+    - layoff
+    - profit warning

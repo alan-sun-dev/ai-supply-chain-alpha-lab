@@ -1,0 +1,41 @@
+ticker,company_name,theme,sub_theme,benefit_logic,confidence_level,notes
+2330.TW,台積電 TSMC,indirect,self,核心 — CAPEX 訊號發行者本身,high,issuer; reference only
+2408.TW,南亞科 Nanya Tech,memory_hbm,DRAM,DRAM specialty,medium,Phase C 新增
+2313.TW,華通 Compeq Manufacturing,pcb_substrate,HDI/server PCB,server PCB / HDI,medium,Phase C 新增 / LEO overlap
+2344.TW,華邦電 Winbond,memory_hbm,DRAM/Flash,DRAM + flash 廠,medium,Phase C 新增
+2308.TW,台達電 Delta Electronics,power_grid_energy,電源,server power supply / cooling,high,Phase C 新增
+3037.TW,欣興 Unimicron,pcb_substrate,ABF substrate,ABF 載板領導,high,Phase C 新增
+8299.TWO,群聯 Phison,memory_hbm,NAND controller,NAND controller / SSD,high,Phase C 新增
+3189.TW,景碩 Kinsus,pcb_substrate,ABF/BT substrate,ABF + BT 載板,high,Phase C 新增
+3105.TWO,穩懋 WIN Semi,semi_equipment,GaAs foundry,化合物半導體晶圓代工,low,SURVIVORSHIP-TEST
+3017.TW,奇鋐 Auras Technology,thermal,AI server 散熱,液冷 / 散熱模組,high,Phase C 新增 / AI server overlap
+2383.TW,台光電 Elite Material,pcb_substrate,銅箔基板,高速 CCL 龍頭,high,Phase C 新增
+8046.TW,南電 Nan Ya PCB,pcb_substrate,ABF substrate,ABF 載板,high,Phase C 新增
+2327.TW,國巨 Yageo,passive_components,MLCC,MLCC / 被動元件巨頭,high,Phase C 新增
+3260.TWO,威剛 ADATA,memory_hbm,memory module,DRAM/SSD module,medium,Phase C 新增
+2368.TW,金像電 Gold Circuit Electronics,pcb_substrate,server PCB,AI server PCB / 高階 PCB,high,Phase C 新增
+6669.TW,緯穎 Wiwynn,ai_server_assembly,cloud hardware,cloud hardware / hyperscaler,high,Phase C 新增
+6285.TW,啟碁 Wistron NeWeb,leo_satellite,衛星設備,衛星 router / antenna,medium,Phase C 新增
+6274.TWO,台燿 Taiwan Union Tech,pcb_substrate,銅箔基板,高速 CCL / server PCB,high,Phase C 新增 / LEO overlap
+4979.TWO,華星光通 PCL Tech,optical_communication,矽光子,矽光子 / CPO,medium,Phase C 新增
+3653.TW,健策 KEDGE,thermal,AI server 散熱,heat sink / 散熱模組,high,Phase C 新增 / AI server overlap
+8358.TW,金居 Co-Tech Development,pcb_substrate,銅箔,銅箔基板原料,medium,Phase C 新增
+3450.TWO,聯鈞 Browave,optical_communication,光元件,光被動元件,medium,Phase C 新增
+2382.TW,廣達 Quanta,ai_server_assembly,AI server ODM,AI server ODM 龍頭,high,Phase C 新增
+3324.TWO,雙鴻 Asia Vital Components,thermal,AI server 散熱,液冷 / cold plate,high,Phase C 新增
+3081.TWO,聯亞 LandMark Optoelectronics,optical_communication,光通訊外延片,雷射 / 光學元件,medium,Phase C 新增
+6442.TW,光聖 Luxnet Corp,optical_communication,光收發,主動光纜 / 矽光子,medium,Phase C 新增
+3231.TW,緯創 Wistron,ai_server_assembly,AI server ODM,AI server ODM / rack,high,Phase C 新增
+6213.TW,聯茂 ITEQ,pcb_substrate,銅箔基板,高速 CCL,high,Phase C 新增 / LEO overlap
+5347.TWO,世界先進 Vanguard,indirect,成熟製程,TSMC 子公司 / 成熟節點,medium,SURVIVORSHIP-TEST-2
+4967.TW,十銓 Team Group,memory_hbm,memory module,DRAM/SSD module,low,Phase C 新增
+2404.TW,漢唐 United Integrated Services,facility_cleanroom,廠務統包,廠務統包與機電整合,high,2nm/CoWoS 擴建
+1519.TW,華城 Hua Eng Wire,power_grid_energy,grid equipment,變壓器 / 電網設備,high,Phase C 新增
+6187.TWO,萬潤 Wan Run,semi_equipment,封裝設備,封裝測試與設備,medium,CoWoS / 先進封裝
+6488.TWO,環球晶 GlobalWafers,gases_chemicals,矽晶圓,矽晶圓供應商,high,SURVIVORSHIP-TEST-2
+8996.TW,高力 KAORI,thermal,熱交換器,液冷 CDU / 熱交換,high,Phase C 新增
+6139.TW,亞翔工程 Acter,facility_cleanroom,無塵室,無塵室統包,high,新廠案 ramp 期
+3363.TWO,上詮 LuxNet,optical_communication,光收發,光通訊收發模組,medium,Phase C 新增
+2451.TW,創見 Transcend,memory_hbm,memory module,DRAM/SSD module,medium,Phase C 新增
+4977.TW,眾達-KY Applied Optoelectronics,optical_communication,光收發,800G AOC / 矽光子,high,Phase C 新增
+3131.TWO,弘塑 Grand Process Technology,semi_equipment,濕製程設備,先進製程濕式蝕刻設備,medium,2nm 拉貨節奏

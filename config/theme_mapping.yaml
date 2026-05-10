@@ -1,0 +1,26 @@
+# Maps narrative tags → universe themes.
+# Used by narrative_scorer to attribute news to stocks.
+
+tag_to_themes:
+  cowos:               [advanced_packaging, semi_equipment, facility_cleanroom]
+  twonm:               [facility_cleanroom, semi_equipment, inspection]
+  ai_server:           [advanced_packaging, semi_equipment]
+  facility:            [facility_cleanroom]
+  optical:             [advanced_packaging]
+  memory:              [advanced_packaging, indirect]
+  passive_components:  [indirect]
+  power_grid:          [indirect]
+  germany_fab:         [facility_cleanroom]
+  japan_fab:           [facility_cleanroom]
+  overseas_fab:        [facility_cleanroom]
+  n2_a16:              [facility_cleanroom, semi_equipment, inspection]
+  advanced_packaging:  [advanced_packaging, semi_equipment]
+
+# Theme priority — higher = more conviction theme has structural support.
+theme_priority:
+  facility_cleanroom: 1.00
+  advanced_packaging: 1.00
+  semi_equipment:     0.90
+  inspection:         0.70
+  gases_chemicals:    0.60
+  indirect:           0.40

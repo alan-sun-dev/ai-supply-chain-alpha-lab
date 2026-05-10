@@ -1,0 +1,74 @@
+# Universe & benchmark configuration.
+# Theme keys here must match the `theme` column in data/manual/beneficiary_universe.csv.
+
+benchmark:
+  primary: "0050.TW"      # 元大台灣50, used as default Taiwan equity benchmark
+  secondary: "^TWII"      # 加權指數
+
+themes:
+  facility_cleanroom:
+    label: "Facility / Cleanroom"
+    description: "廠務工程、無塵室、機電整合 — 最早受惠 capex_stage=build"
+    expected_lag_months: [0, 6]
+  semi_equipment:
+    label: "Semiconductor Equipment"
+    description: "半導體設備本體與設備代理 — 廠務之後、量產之前"
+    expected_lag_months: [3, 12]
+  gases_chemicals:
+    label: "Gases & Chemicals"
+    description: "特殊氣體、化學材料 — 量產拉升才反映"
+    expected_lag_months: [6, 18]
+  inspection:
+    label: "Inspection / Analysis"
+    description: "檢測、分析、量測"
+    expected_lag_months: [3, 12]
+  advanced_packaging:
+    label: "Advanced Packaging / CoWoS"
+    description: "先進封裝、CoWoS、載板、設備"
+    expected_lag_months: [0, 12]
+  indirect:
+    label: "Indirect Beneficiaries"
+    description: "其他間接受益股 — 訊號較弱"
+    expected_lag_months: [6, 24]
+
+  # Phase C / Step-1 (2026-05-03): new themes from universe expansion
+  optical_communication:
+    label: "Optical Communication"
+    description: "光通訊、矽光子、CPO、800G/1.6T 光收發"
+    expected_lag_months: [3, 12]
+  thermal:
+    label: "Thermal / Cooling"
+    description: "AI server 散熱、液冷、cold plate、heat sink"
+    expected_lag_months: [0, 9]
+  memory_hbm:
+    label: "Memory / HBM"
+    description: "HBM、DRAM、NAND、memory controller / module"
+    expected_lag_months: [3, 12]
+  passive_components:
+    label: "Passive Components"
+    description: "MLCC、電阻、電容、石英元件"
+    expected_lag_months: [3, 12]
+  pcb_substrate:
+    label: "PCB / Substrate"
+    description: "ABF 載板、HDI、server PCB、高速 CCL"
+    expected_lag_months: [3, 12]
+  power_grid_energy:
+    label: "Power / Grid / Energy"
+    description: "AI server 電源、UPS、電網設備、變壓器"
+    expected_lag_months: [3, 18]
+  leo_satellite:
+    label: "LEO Satellite"
+    description: "低軌衛星、微波元件、衛星天線 / router"
+    expected_lag_months: [6, 24]
+  ai_server_assembly:
+    label: "AI Server Assembly / ODM"
+    description: "AI server ODM、rack 整合、cloud hardware"
+    expected_lag_months: [0, 6]
+
+manual_files:
+  # Step-1 (2026-05-03): switched active baseline to expanded_liquid_60 (Phase C).
+  # Original 22-name universe preserved at data/manual/beneficiary_universe.csv
+  # for archival comparison; rerun build_expanded_universe.py to refresh.
+  beneficiary_universe: "data/manual/beneficiary_universe_expanded_liquid_60.csv"
+  capex_events:         "data/manual/tsmc_capex_events.csv"
+  monthly_revenue:      "data/manual/monthly_revenue.csv"

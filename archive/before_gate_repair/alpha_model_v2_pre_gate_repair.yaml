@@ -1,0 +1,106 @@
+# Alpha Model V2 — Residual Alpha + Theme + Confirmation
+# All weights subject to walk-forward validation.
+
+ai_factor_index:
+  benchmark_primary:   "0050.TW"
+  benchmark_secondary: "^TWII"
+  benchmark_global:    "^SOX"            # graceful fallback if missing
+  theme_weights:
+    facility_cleanroom: 0.25
+    semi_equipment:     0.25
+    advanced_packaging: 0.20
+    inspection:         0.10
+    gases_chemicals:    0.10
+    indirect:           0.10
+  history_start: "2018-01-01"
+
+residual_alpha:
+  rolling_window_days: 120
+  min_obs:             60          # below this → leave betas NaN, do not trade
+  benchmark:           "0050.TW"
+  ai_index_source:     "aggregate"
+  momentum_windows:    [20, 60]
+  vol_window:          60
+  drawdown_window:     60
+
+scoring_v2:
+  # Final alpha_score is a weighted sum of normalized sub-scores.
+  # Phase A1 (2026-05-03): sector_relative_strength + narrative zeroed after
+  # walk-forward ablation showed they hurt or added no value. residual alpha
+  # remains Tier 1 core; risk_penalty + decision-zone hierarchy unchanged.
+  factor_weights:
+    residual_momentum_60d:        0.25
+    residual_momentum_20d:        0.10
+    revenue_acceleration:         0.15
+    sector_relative_strength:     0.00   # A1: removed — ablation showed it hurts (+650 pts when off)
+    institutional_flow_score:     0.10
+    valuation_risk_score:        -0.10   # penalty
+    volatility_contraction:       0.10
+    drawdown_recovery:            0.10
+    theme_strength:               0.10
+    capex_context_score:          0.00   # context only — never a trigger
+
+  # Tier weights blend into final alpha_score.
+  # A2-adopt (2026-05-03 post-B3): "simplest robust" weights from A2-rerun
+  # weight grid on full FinMind coverage. Findings:
+  #   - rev_w sensitivity is monotonic — every increment hurts; optimum = 0
+  #   - flw_w sensitivity is flat 0-0.20 → 0 chosen for simplicity
+  #   - ra_w optimum is 0.50 (was 0.35 under pre-B3 partial coverage)
+  #   - risk_mult optimum is 0.5-0.75; 0.75 chosen as safer middle
+  # Engineering baseline — model is now `residual_alpha − 0.75 × risk_penalty`.
+  # See reports/phase_a2rerun_post_b3.md for full grid + sensitivity tables.
+  tier_weights:
+    residual_alpha_score:        0.50   # was 0.35 (A2-adopt)
+    revenue_confirmation_score:  0.00   # was 0.30 (dropped A2-adopt: noisy after B3)
+    sector_relative_score:       0.00   # A1: removed
+    institutional_flow_score:    0.00   # was 0.10 (dropped A2-adopt: flat sensitivity)
+    narrative_score:             0.00   # A1: removed
+    capex_context_score:         0.05   # context only
+
+  # Ceilings ensure narrative/CAPEX never dominate.
+  caps:
+    capex_context_score: 0.5     # max 0.5 raw points before tier weighting
+    narrative_score_share: 0.10  # narrative may not exceed 10% of total
+
+  # Risk-penalty calibration (A2-adopt 2026-05-03).
+  # `risk_penalty` was previously hardcoded with implicit multiplier = 1.0.
+  # A2-rerun grid showed 0.5–0.75 dominates 1.0+ across all robustness-passing
+  # cells; 0.75 chosen to keep risk discipline active while removing ~25% of
+  # the in-sample drag from valuation-extreme penalties on AI-mania names.
+  # Default 1.0 preserved when this field is absent (backwards compatible).
+  risk:
+    penalty_multiplier: 0.75
+
+  # Decision zones. Order matters; first match wins.
+  # A2 (2026-05-03): Strong min_alpha lowered 4.0 → 2.5 to recover statistical power.
+  # Step-1 (2026-05-03): Watchlist min_alpha tested at 2.3 — REVERTED to 2.0.
+  # The threshold raise made Watchlist hit rate WORSE (40% → 34.8%) because the
+  # 2.0-2.3 cohort actually had decent fwd returns; raising the threshold left
+  # only "high alpha but Strong-gate-blocked" residuals which underperform.
+  # Watchlist quality issue is structural to the wider Phase C universe and
+  # will be addressed by Phase B2/B3 FinMind backfill (Tier-2 confirmation),
+  # not by threshold tuning.
+  decision_zones:
+    - { name: "Strong Candidate", min_alpha: 2.5, min_confidence: 3.0, max_risk: 3 }
+    - { name: "Watchlist",        min_alpha: 2.0, min_confidence: 2.0, max_risk: 5 }
+    - { name: "Narrative Watch",  min_alpha: 0.0, min_confidence: 0.0, narrative_only: true }
+    - { name: "Avoid Chasing",    overbought_and_revenue_weak: true }
+    - { name: "Neutral",          min_alpha: 0.0, min_confidence: 0.0 }
+    - { name: "Avoid",            min_alpha: -999, min_confidence: -999 }
+
+  # Step-1 portfolio construction layer — applied AFTER decision_zone is set.
+  # The label says "research priority"; the cap controls actual sizing.
+  portfolio_construction:
+    top_n: 5
+    max_per_theme: 2          # at most 2 of the top-5 may share a theme
+    enable_theme_cap: true
+
+confidence:
+  data_quality_min_obs: 60
+  signal_agreement_bonus: 1.0
+  multi_source_news_bonus: 1.0
+  missing_data_penalty: 1.0
+  regime_penalty:
+    risk_off:           1.5
+    ai_bubble_warning:  1.0
+    drawdown_control:   2.0

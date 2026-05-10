@@ -1,0 +1,24 @@
+ticker,company_name,theme,sub_theme,benefit_logic,capex_stage,expected_lag_months,confidence_level,notes
+2330.TW,台積電 TSMC,indirect,self,核心 — CAPEX 訊號發行者本身，作為 reference / self-check,build,0,high,作為 CAPEX signal 來源；不是受益股，但保留以做基準比較
+2404.TW,漢唐 United Integrated Services,facility_cleanroom,廠務統包,廠務統包與機電整合 — TSMC 新廠最早受益,build,0-6,high,2nm/CoWoS 擴建初期顯著受惠
+6139.TW,亞翔工程 Acter,facility_cleanroom,無塵室,無塵室統包 — 與廠務工程同步,build,0-6,high,新廠案 ramp 期受益最明顯
+5536.TW,聖暉 Acter Group,facility_cleanroom,廠務統包,系統整合 + 機電工程 — 受惠 TSMC 與 PSMC/UMC capex,build,0-6,medium,海外建廠也是 driver
+6196.TW,帆宣 Marketech International,facility_cleanroom,廠務 + 設備整合,廠務工程 + 設備代理 — 雙引擎,build,0-9,high,跨 build 與 tooling 兩階段
+3131.TWO,弘塑 Grand Process Technology,semi_equipment,濕製程設備,先進製程與濕式蝕刻設備供應,tooling,3-12,medium,看 2nm 拉貨節奏
+3583.TW,辛耘 Sun Tech,semi_equipment,設備 + 零件,半導體設備本體與耗材,tooling,3-12,medium,設備代理 + 自有產品
+6187.TWO,萬潤 Wan Run,semi_equipment,封裝設備,封裝測試與設備 — 與先進封裝連動,tooling,3-9,medium,CoWoS / 先進封裝相關
+3680.TW,家登 Gudeng Precision,semi_equipment,EUV pod / 載具,EUV 光罩盒、晶圓盒 — 直接綁 EUV 上量,tooling,0-9,high,EUV 上量直接 driver
+3587.TW,閎康 Materials Analysis Technology,inspection,材料分析,材料分析與失效檢測,ramp,3-12,medium,先進製程量產後檢測需求拉升
+4755.TW,三福化工 San Fu Chemical,gases_chemicals,化學品,半導體化學品 — 量產材料,ramp,6-18,medium,訊號最慢，量產後反映
+1727.TW,中華化學 China Chemical & Pharmaceutical,gases_chemicals,化學品,工業 + 半導體化學品,ramp,6-18,low,半導體營收佔比需確認
+4763.TW,材料-KY 國際應材,gases_chemicals,材料,半導體與面板材料 — 多元客戶,ramp,6-24,low,須確認 TSMC 業務佔比
+3041.TW,揚智 Ali Corp,semi_equipment,IC 設計,IC 設計 — 理論上受益於先進製程客戶設計案,tooling,6-12,low,SURVIVORSHIP-TEST: 加入以驗證 alpha — 8 年總報酬 -48%
+6202.TW,盛群 Holtek,semi_equipment,MCU,MCU 設計 — 受惠終端消費電子但不直接 TSMC capex,tooling,6-12,low,SURVIVORSHIP-TEST: +16% 8yr return — 大幅落後同類
+6271.TW,同欣電 Tong Hsing,inspection,影像感測封裝,影像感測 + 模組封裝 — 與檢測 / 先進封裝相關,ramp,6-12,low,SURVIVORSHIP-TEST: +55% — 落後同題材
+1721.TW,三晃 Sunko-Ink,gases_chemicals,化學品,工業化學品 — 半導體佔比小,ramp,12-24,low,SURVIVORSHIP-TEST: +85% — 落後同題材
+3105.TWO,穩懋 WIN Semi,semi_equipment,GaAs foundry,化合物半導體晶圓代工 — 與 TSMC 邏輯相似但市場不同,tooling,6-12,low,SURVIVORSHIP-TEST: +114% — 化合物半導體不直接受益於 TSMC capex
+5347.TWO,世界先進 Vanguard,indirect,成熟製程晶圓代工,TSMC 子公司 / 成熟節點 foundry — 應該受益但長期跟不上 2330,build,0-6,medium,SURVIVORSHIP-TEST-2: +226% — 成熟製程沒享受到 AI 紅利
+3413.TW,京鼎 KE Holdings,semi_equipment,半導體設備,設備本體 — 應該受益於 TSMC 拉貨,tooling,3-12,medium,SURVIVORSHIP-TEST-2: +123% — 落後同題材設備股
+6488.TWO,環球晶 GlobalWafers,gases_chemicals,矽晶圓,矽晶圓供應商 — TSMC 直接客戶,ramp,6-18,high,SURVIVORSHIP-TEST-2: +83% — 應該是核心受益但被 wafer 供需循環壓制
+2436.TW,偉詮電 Weltrend,semi_equipment,IC 設計,IC 設計周邊 — 終端消費,tooling,6-12,low,SURVIVORSHIP-TEST-2: +144% — 半導體周邊但和 TSMC capex 連動弱
+2351.TW,順德 SDI,gases_chemicals,導線架,IC 封裝原料 (lead frame),ramp,6-18,low,SURVIVORSHIP-TEST-2: +124% — 後段封裝材料但傳統製程

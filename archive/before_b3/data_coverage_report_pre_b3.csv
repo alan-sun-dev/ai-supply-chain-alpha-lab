@@ -1,0 +1,61 @@
+ticker,company_name,theme,price_n,price_first,price_last,price_missing_ratio,revenue_n,revenue_first,revenue_last,revenue_yoy_n_nonnull,flow_n,flow_first,flow_last,valuation_n,valuation_first,valuation_last,tier2_complete
+2330.TW,台積電 TSMC,indirect,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1045,2022-01-03,2026-04-30,1535,2020-01-02,2026-04-30,True
+2408.TW,南亞科 Nanya Tech,memory_hbm,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2313.TW,華通 Compeq Manufacturing,pcb_substrate,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2344.TW,華邦電 Winbond,memory_hbm,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2308.TW,台達電 Delta Electronics,power_grid_energy,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3037.TW,欣興 Unimicron,pcb_substrate,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+8299.TWO,群聯 Phison,memory_hbm,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3189.TW,景碩 Kinsus,pcb_substrate,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3105.TWO,穩懋 WIN Semi,semi_equipment,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1044,2022-01-03,2026-04-30,1534,2020-01-02,2026-04-30,True
+3017.TW,奇鋐 Auras Technology,thermal,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2383.TW,台光電 Elite Material,pcb_substrate,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+8046.TW,南電 Nan Ya PCB,pcb_substrate,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2327.TW,國巨 Yageo,passive_components,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3260.TWO,威剛 ADATA,memory_hbm,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2368.TW,金像電 Gold Circuit Electronics,pcb_substrate,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+6669.TW,緯穎 Wiwynn,ai_server_assembly,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+6285.TW,啟碁 Wistron NeWeb,leo_satellite,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+6274.TWO,台燿 Taiwan Union Tech,pcb_substrate,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+4979.TWO,華星光通 PCL Tech,optical_communication,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3653.TW,健策 KEDGE,thermal,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+8358.TW,金居 Co-Tech Development,pcb_substrate,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3450.TWO,聯鈞 Browave,optical_communication,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2382.TW,廣達 Quanta,ai_server_assembly,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3324.TWO,雙鴻 Asia Vital Components,thermal,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3081.TWO,聯亞 LandMark Optoelectronics,optical_communication,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+6442.TW,光聖 Luxnet Corp,optical_communication,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3231.TW,緯創 Wistron,ai_server_assembly,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+6213.TW,聯茂 ITEQ,pcb_substrate,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+5347.TWO,世界先進 Vanguard,indirect,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1043,2022-01-03,2026-04-30,1534,2020-01-02,2026-04-30,True
+4967.TW,十銓 Team Group,memory_hbm,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2404.TW,漢唐 United Integrated Services,facility_cleanroom,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1045,2022-01-03,2026-04-30,1535,2020-01-02,2026-04-30,True
+1519.TW,華城 Hua Eng Wire,power_grid_energy,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+6187.TWO,萬潤 Wan Run,semi_equipment,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1044,2022-01-03,2026-04-30,1534,2020-01-02,2026-04-30,True
+6488.TWO,環球晶 GlobalWafers,gases_chemicals,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1044,2022-01-03,2026-04-30,1534,2020-01-02,2026-04-30,True
+8996.TW,高力 KAORI,thermal,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+6139.TW,亞翔工程 Acter,facility_cleanroom,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1045,2022-01-03,2026-04-30,1535,2020-01-02,2026-04-30,True
+3363.TWO,上詮 LuxNet,optical_communication,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2451.TW,創見 Transcend,memory_hbm,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+4977.TW,眾達-KY Applied Optoelectronics,optical_communication,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3131.TWO,弘塑 Grand Process Technology,semi_equipment,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1044,2022-01-03,2026-04-30,1534,2020-01-02,2026-04-30,True
+2357.TW,華碩 ASUS,ai_server_assembly,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3491.TWO,昇達科 Microelectronics Technology,leo_satellite,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2376.TW,技嘉 GIGABYTE,ai_server_assembly,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2492.TW,華新科 Walsin Technology,passive_components,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+5536.TW,聖暉 Acter Group,facility_cleanroom,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1037,2022-01-03,2026-04-30,1527,2020-01-02,2026-04-30,True
+6271.TW,同欣電 Tong Hsing,inspection,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1038,2022-01-03,2026-04-30,1522,2020-01-02,2026-04-30,True
+6282.TW,康舒 ACBEL Polytech,power_grid_energy,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3583.TW,辛耘 Sun Tech,semi_equipment,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1045,2022-01-03,2026-04-30,1535,2020-01-02,2026-04-30,True
+2356.TW,英業達 Inventec,ai_server_assembly,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+1513.TW,中興電 Chung-Hsin Electric,power_grid_energy,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+1504.TW,東元 TECO,power_grid_energy,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3680.TW,家登 Gudeng Precision,semi_equipment,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1045,2022-01-03,2026-04-30,1534,2020-01-02,2026-04-30,True
+2377.TW,微星 MSI,ai_server_assembly,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3587.TW,閎康 Materials Analysis Technology,inspection,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1045,2022-01-03,2026-04-30,1534,2020-01-02,2026-04-30,True
+6196.TW,帆宣 Marketech International,facility_cleanroom,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1045,2022-01-03,2026-04-30,1535,2020-01-02,2026-04-30,True
+2421.TW,建準 Sunon,thermal,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+2351.TW,順德 SDI,gases_chemicals,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1044,2022-01-03,2026-04-30,1535,2020-01-02,2026-04-30,True
+2436.TW,偉詮電 Weltrend,semi_equipment,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1044,2022-01-03,2026-04-30,1535,2020-01-02,2026-04-30,True
+1514.TW,亞力 Allis Electric,power_grid_energy,2018,2018-01-02,2026-04-30,0.0,0,,,0,0,,,0,,,False
+3413.TW,京鼎 KE Holdings,semi_equipment,2018,2018-01-02,2026-04-30,0.0,76,2020-01-01,2026-04-01,64,1044,2022-01-03,2026-04-30,1535,2020-01-02,2026-04-30,True

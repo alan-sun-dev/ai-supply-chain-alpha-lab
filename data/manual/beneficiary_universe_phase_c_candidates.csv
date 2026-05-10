@@ -1,0 +1,79 @@
+ticker,company_name,market,theme,sub_theme,benefit_logic,confidence_level,notes
+2330.TW,台積電 TSMC,TWSE,indirect,self,核心 — CAPEX 訊號發行者本身,high,issuer; reference only
+2404.TW,漢唐 United Integrated Services,TWSE,facility_cleanroom,廠務統包,廠務統包與機電整合,high,2nm/CoWoS 擴建
+6139.TW,亞翔工程 Acter,TWSE,facility_cleanroom,無塵室,無塵室統包,high,新廠案 ramp 期
+5536.TW,聖暉 Acter Group,TWSE,facility_cleanroom,廠務統包,系統整合 + 機電工程,medium,海外建廠 driver
+6196.TW,帆宣 Marketech International,TWSE,facility_cleanroom,廠務+設備整合,廠務工程 + 設備代理,high,跨 build 與 tooling
+3131.TWO,弘塑 Grand Process Technology,TPEX,semi_equipment,濕製程設備,先進製程濕式蝕刻設備,medium,2nm 拉貨節奏
+3583.TW,辛耘 Sun Tech,TWSE,semi_equipment,設備+零件,半導體設備本體與耗材,medium,設備代理 + 自產
+6187.TWO,萬潤 Wan Run,TPEX,semi_equipment,封裝設備,封裝測試與設備,medium,CoWoS / 先進封裝
+3680.TW,家登 Gudeng Precision,TWSE,semi_equipment,EUV pod,EUV 光罩盒、晶圓盒,high,EUV 上量直接 driver
+3587.TW,閎康 Materials Analysis Technology,TWSE,inspection,材料分析,材料分析與失效檢測,medium,先進製程量產後檢測
+4755.TW,三福化工 San Fu Chemical,TWSE,gases_chemicals,化學品,半導體化學品 — 量產材料,medium,訊號最慢
+1727.TW,中華化學 China Chemical & Pharmaceutical,TWSE,gases_chemicals,化學品,工業 + 半導體化學品,low,佔比需確認
+4763.TW,材料-KY 國際應材,TWSE,gases_chemicals,材料,半導體與面板材料,low,TSMC 業務佔比待確認
+1721.TW,三晃 Sunko-Ink,TWSE,gases_chemicals,化學品,工業化學品 — 半導體佔比小,low,SURVIVORSHIP-TEST
+2351.TW,順德 SDI,TWSE,gases_chemicals,導線架,IC 封裝原料,low,SURVIVORSHIP-TEST
+3041.TW,揚智 Ali Corp,TWSE,semi_equipment,IC 設計,IC 設計周邊,low,SURVIVORSHIP-TEST
+6202.TW,盛群 Holtek,TWSE,semi_equipment,MCU,MCU 設計,low,SURVIVORSHIP-TEST
+5347.TWO,世界先進 Vanguard,TPEX,indirect,成熟製程,TSMC 子公司 / 成熟節點,medium,SURVIVORSHIP-TEST-2
+6271.TW,同欣電 Tong Hsing,TWSE,inspection,影像感測封裝,影像感測 + 模組封裝,low,SURVIVORSHIP-TEST
+6488.TWO,環球晶 GlobalWafers,TPEX,gases_chemicals,矽晶圓,矽晶圓供應商,high,SURVIVORSHIP-TEST-2
+3413.TW,京鼎 KE Holdings,TWSE,semi_equipment,半導體設備,設備本體,medium,SURVIVORSHIP-TEST-2
+2436.TW,偉詮電 Weltrend,TWSE,semi_equipment,IC 設計,IC 設計周邊,low,SURVIVORSHIP-TEST-2
+3105.TWO,穩懋 WIN Semi,TPEX,semi_equipment,GaAs foundry,化合物半導體晶圓代工,low,SURVIVORSHIP-TEST
+3081.TWO,聯亞 LandMark Optoelectronics,TPEX,optical_communication,光通訊外延片,雷射 / 光學元件,medium,Phase C 新增
+4908.TWO,前鼎 Forhouse,TPEX,optical_communication,光收發,光收發模組,medium,Phase C 新增
+4979.TWO,華星光通 PCL Tech,TPEX,optical_communication,矽光子,矽光子 / CPO,medium,Phase C 新增
+3363.TWO,上詮 LuxNet,TPEX,optical_communication,光收發,光通訊收發模組,medium,Phase C 新增
+3450.TWO,聯鈞 Browave,TPEX,optical_communication,光元件,光被動元件,medium,Phase C 新增
+3234.TW,光環 EZconn,TWSE,optical_communication,光收發,800G/1.6T transceiver,medium,Phase C 新增
+6442.TW,光聖 Luxnet Corp,TWSE,optical_communication,光收發,主動光纜 / 矽光子,medium,Phase C 新增
+4977.TW,眾達-KY Applied Optoelectronics,TWSE,optical_communication,光收發,800G AOC / 矽光子,high,Phase C 新增
+3017.TW,奇鋐 Auras Technology,TWSE,thermal,AI server 散熱,液冷 / 散熱模組,high,Phase C 新增 / AI server overlap
+3324.TWO,雙鴻 Asia Vital Components,TPEX,thermal,AI server 散熱,液冷 / cold plate,high,Phase C 新增
+3653.TW,健策 KEDGE,TWSE,thermal,AI server 散熱,heat sink / 散熱模組,high,Phase C 新增 / AI server overlap
+2421.TW,建準 Sunon,TWSE,thermal,風扇,散熱風扇 / 馬達,medium,Phase C 新增
+8996.TW,高力 KAORI,TWSE,thermal,熱交換器,液冷 CDU / 熱交換,high,Phase C 新增
+3338.TW,泰碩 Tai-saw,TWSE,thermal,熱導管,熱導管 / vapor chamber,medium,Phase C 新增
+6230.TWO,尼得科超眾 Nidec Chaun-Choung,TPEX,thermal,散熱,熱導管 / 散熱模組,medium,Phase C 新增
+2344.TW,華邦電 Winbond,TWSE,memory_hbm,DRAM/Flash,DRAM + flash 廠,medium,Phase C 新增
+2408.TW,南亞科 Nanya Tech,TWSE,memory_hbm,DRAM,DRAM specialty,medium,Phase C 新增
+8299.TWO,群聯 Phison,TPEX,memory_hbm,NAND controller,NAND controller / SSD,high,Phase C 新增
+3260.TWO,威剛 ADATA,TPEX,memory_hbm,memory module,DRAM/SSD module,medium,Phase C 新增
+2451.TW,創見 Transcend,TWSE,memory_hbm,memory module,DRAM/SSD module,medium,Phase C 新增
+4967.TW,十銓 Team Group,TWSE,memory_hbm,memory module,DRAM/SSD module,low,Phase C 新增
+2327.TW,國巨 Yageo,TWSE,passive_components,MLCC,MLCC / 被動元件巨頭,high,Phase C 新增
+2492.TW,華新科 Walsin Technology,TWSE,passive_components,MLCC,MLCC / 鋁電解電容,medium,Phase C 新增
+3042.TW,晶技 TXC,TWSE,passive_components,石英元件,石英振盪器 / TCXO,medium,Phase C 新增
+2478.TW,大毅 Ta-I Technology,TWSE,passive_components,電阻,精密電阻,medium,Phase C 新增
+6173.TWO,信昌電 Cosonic,TPEX,passive_components,陶瓷元件,陶瓷被動元件,low,Phase C 新增
+6207.TW,雷科 Larti,TWSE,passive_components,雷射加工,雷射加工 / passive,low,Phase C 新增
+8213.TW,志超 Chi Cheng,TWSE,passive_components,PCB材料,PCB / passive 周邊,low,Phase C 新增
+2313.TW,華通 Compeq Manufacturing,TWSE,pcb_substrate,HDI/server PCB,server PCB / HDI,medium,Phase C 新增 / LEO overlap
+3037.TW,欣興 Unimicron,TWSE,pcb_substrate,ABF substrate,ABF 載板領導,high,Phase C 新增
+3189.TW,景碩 Kinsus,TWSE,pcb_substrate,ABF/BT substrate,ABF + BT 載板,high,Phase C 新增
+8046.TW,南電 Nan Ya PCB,TWSE,pcb_substrate,ABF substrate,ABF 載板,high,Phase C 新增
+2368.TW,金像電 Gold Circuit Electronics,TWSE,pcb_substrate,server PCB,AI server PCB / 高階 PCB,high,Phase C 新增
+6274.TWO,台燿 Taiwan Union Tech,TPEX,pcb_substrate,銅箔基板,高速 CCL / server PCB,high,Phase C 新增 / LEO overlap
+6213.TW,聯茂 ITEQ,TWSE,pcb_substrate,銅箔基板,高速 CCL,high,Phase C 新增 / LEO overlap
+2383.TW,台光電 Elite Material,TWSE,pcb_substrate,銅箔基板,高速 CCL 龍頭,high,Phase C 新增
+8358.TW,金居 Co-Tech Development,TWSE,pcb_substrate,銅箔,銅箔基板原料,medium,Phase C 新增
+2387.TW,精元 Sunrex,TWSE,pcb_substrate,鍵盤+PCB,鍵盤 / PCB 周邊,low,Phase C 新增 / 邊緣
+2308.TW,台達電 Delta Electronics,TWSE,power_grid_energy,電源,server power supply / cooling,high,Phase C 新增
+1504.TW,東元 TECO,TWSE,power_grid_energy,馬達,大型馬達 / 電力設備,medium,Phase C 新增
+1513.TW,中興電 Chung-Hsin Electric,TWSE,power_grid_energy,grid equipment,變電 / GIS,high,Phase C 新增
+1519.TW,華城 Hua Eng Wire,TWSE,power_grid_energy,grid equipment,變壓器 / 電網設備,high,Phase C 新增
+6282.TW,康舒 ACBEL Polytech,TWSE,power_grid_energy,電源,server power supply,medium,Phase C 新增
+6412.TW,群電 Chicony Power,TWSE,power_grid_energy,電源,server power supply,medium,Phase C 新增
+3015.TW,全漢 Sparkle Power,TWSE,power_grid_energy,電源,工業電源,low,Phase C 新增
+1514.TW,亞力 Allis Electric,TWSE,power_grid_energy,grid equipment,配電盤 / 電網設備,medium,Phase C 新增
+3491.TWO,昇達科 Microelectronics Technology,TPEX,leo_satellite,微波元件,微波 / LEO 元件,medium,Phase C 新增
+6285.TW,啟碁 Wistron NeWeb,TWSE,leo_satellite,衛星設備,衛星 router / antenna,medium,Phase C 新增
+3231.TW,緯創 Wistron,TWSE,ai_server_assembly,AI server ODM,AI server ODM / rack,high,Phase C 新增
+2382.TW,廣達 Quanta,TWSE,ai_server_assembly,AI server ODM,AI server ODM 龍頭,high,Phase C 新增
+6669.TW,緯穎 Wiwynn,TWSE,ai_server_assembly,cloud hardware,cloud hardware / hyperscaler,high,Phase C 新增
+2356.TW,英業達 Inventec,TWSE,ai_server_assembly,AI server ODM,AI server ODM,medium,Phase C 新增
+2376.TW,技嘉 GIGABYTE,TWSE,ai_server_assembly,AI server,AI server / GPU server brand,high,Phase C 新增
+2377.TW,微星 MSI,TWSE,ai_server_assembly,AI server,AI server / GPU server brand,medium,Phase C 新增
+2357.TW,華碩 ASUS,TWSE,ai_server_assembly,AI server,AI server brand,medium,Phase C 新增

@@ -1,0 +1,43 @@
+# Market / AI regime rules — pure numeric thresholds, no model.
+
+inputs:
+  market_benchmark: "0050.TW"
+  ai_aggregate_id: "aggregate"        # produced by ai_factor_index.py
+  global_benchmark: "^SOX"            # optional
+  vix_proxy: "^VIX"                   # optional
+
+regimes:
+  risk_on:
+    require:
+      market_above_ma120:        true
+      ai_above_ma60:             true
+      ai_drawdown_60d_min:      -0.10
+    gross_exposure: 1.00
+    top_n: 5
+
+  neutral:
+    require:
+      market_above_ma120:        true
+      ai_above_ma60:             false
+    gross_exposure: 0.70
+    top_n: 5
+
+  risk_off:
+    require:
+      market_above_ma120:        false
+      ai_above_ma60:             false
+    gross_exposure: 0.30
+    top_n: 3
+
+  ai_bubble_warning:
+    require:
+      ai_60d_return_min:         0.40
+      revenue_confirmation:      false
+    gross_exposure: 0.50
+    top_n: 3
+
+  drawdown_control:
+    require:
+      strategy_drawdown_min:    -0.15
+    gross_exposure: 0.30           # Phase D1 (2026-05-03): was 0.20 — per user spec
+    top_n: 2
