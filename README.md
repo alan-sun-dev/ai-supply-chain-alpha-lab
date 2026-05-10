@@ -3,6 +3,8 @@
 > Daily AI Supply Chain Alpha Discovery & Ranking Platform.
 > Pure v2 fork — clean repo, no legacy CAPEX-event code.
 
+**English** | [繁體中文](README.zh-TW.md)
+
 ---
 
 ## 0. Disclaimer
